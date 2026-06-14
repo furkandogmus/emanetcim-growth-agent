@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-06-14",
+  "type": "hotel_partnership_strategy",
+  "target_cities": [
+    "istanbul",
+    "antalya",
+    "izmir",
+    "ankara",
+    "bodrum",
+    "cappadocia"
+  ],
+  "commission_models": [
+    {
+      "name": "Temel Ortaklık (Önerilen)",
+      "description": "Otel, BagajPark noktasına yönlendirdiği her misafir için %10 komisyon alır. Ek gelir, sıfır operasyonel yük.",
+      "otel_effort": "Düşük",
+      "revenue_potential": "Orta",
+      "best_for": "Butik oteller, hosteller"
+    },
+    {
+      "name": "Premium Ortaklık",
+      "description": "Otel bünyesinde BagajPark noktası açılır. Otel, kendi alanında bagaj kabul eder, her işlemden %15-20 komisyon alır.",
+      "otel_effort": "Orta",
+      "revenue_potential": "Yüksek",
+      "best_for": "Zincir oteller, büyük hosteller"
+    },
+    {
+      "name": "Otel Partner Ağı",
+      "description": "Otel grubu ile toplu anlaşma. Tüm otellerde BagajPark yönlendirmesi + ortak pazarlama. Aylık sabit ücret + değişken komisyon.",
+      "otel_effort": "Düşük",
+      "revenue_potential": "Çok Yüksek",
+      "best_for": "Otel zincirleri, gruplar"
+    }
+  ],
+  "total_addressable_hotels": 9700,
+  "outreach_templates": {
+    "tr": {
+      "subject": "Otel misafirleriniz için bagaj çözümü",
+      "body": "Merhaba, misafirlerinizin check-out sonrası valiz sorununa pratik bir çözüm sunuyoruz..."
+    },
+    "en": {
+      "subject": "Luggage solution for your hotel guests",
+      "body": "Hi, we offer a practical solution for your guests' post-checkout luggage problem..."
+    }
+  },
+  "city_strategies": {
+    "istanbul": {
+      "estimated_hotels": 4500,
+      "priority_district": "Sultanahmet",
+      "best_approach": "Visit Sultanahmet district hotels in person with flyers"
+    },
+    "antalya": {
+      "estimated_hotels": 2500,
+      "priority_district": "Kaleiçi",
+      "best_approach": "Visit Kaleiçi district hotels in person with flyers"
+    },
+    "izmir": {
+      "estimated_hotels": 800,
+      "priority_district": "Alsancak",
+      "best_approach": "Visit Alsancak district hotels in person with flyers"
+    },
+    "ankara": {
+      "estimated_hotels": 900,
+      "priority_district": "Kızılay",
+      "best_approach": "Visit Kızılay district hotels in person with flyers"
+    },
+    "bodrum": {
+      "estimated_hotels": 600,
+      "priority_district": "Merkez",
+      "best_approach": "Visit Merkez district hotels in person with flyers"
+    },
+    "cappadocia": {
+      "estimated_hotels": 400,
+      "priority_district": "Göreme",
+      "best_approach": "Visit Göreme district hotels in person with flyers"
+    }
+  },
+  "pitch_deck_points": [
+    "Otel, bagaj odası veya personel ayırmak zorunda kalmaz",
+    "Misafir check-out sonrası şehri özgürce keşfeder",
+    "Otel ek gelir elde eder (%10-20 komisyon)",
+    "Memnuniyet skorları artar",
+    "Online rezervasyon, ön büro yükünü azaltır",
+    "11 dil desteği ile uluslararası misafirlere hitap",
+    "Sigortalı ve mühürlü bagaj güvenliği",
+    "Rakiplerinizden (Bounce) önce davranın"
+  ],
+  "quick_wins": [
+    "Sultanahmet'teki 10 butik otele birebir ziyaret",
+    "Airbnb ev sahiplerine dijital kart dağıtımı",
+    "Otel resepsiyonlarına BagajPark QR kartpostal",
+    "Booking.com/Expedia mesajlarına BagajPark linki ekleme"
+  ]
+}
