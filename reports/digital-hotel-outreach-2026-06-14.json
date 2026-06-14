@@ -1,0 +1,159 @@
+{
+  "generated_at": "2026-06-14",
+  "type": "digital_hotel_outreach",
+  "total_strategies": 6,
+  "strategies": [
+    {
+      "id": "booking-messages",
+      "name": "Booking.com / Expedia Misafir Yorumlarına Cevap",
+      "emoji": "🏨",
+      "difficulty": "Düşük",
+      "impact": "🔥 Yüksek",
+      "description": "Booking.com ve Expedia'da İstanbul otellerinin yorumlarına bak. 'Check-out erken, valizle gezmek zorunda kaldık' gibi şikayetleri bul. Otele BagajPark çözümünü anlatan kısa bir mesaj gönder. Otel zaten bu sorunu yaşıyor, çözüm sunuyorsun.",
+      "steps": [
+        "Booking.com'da Sultanahmet otellerini ara",
+        "Düşük puanlı yorumları tara (özellikle 'check-out', 'bagaj', 'valiz' geçenler)",
+        "Otel WhatsApp/email'ini bul (genelde sitelerinde var)",
+        "Şu mesajı gönder: 'Merhaba, misafir yorumlarınızda check-out sonrası valiz sorunundan bahsedildiğini gördük. BagajPark ile bu sorunu çözüp %10 komisyon kazanabilirsiniz. Detay: bagajpark.com/tr/hotels'"
+      ],
+      "tools": [
+        "Booking.com",
+        "Google Maps",
+        "Otel websitesi"
+      ]
+    },
+    {
+      "id": "google-maps",
+      "name": "Google Maps Otel Keşfi + Otomatik Mesaj",
+      "emoji": "📍",
+      "difficulty": "Düşük",
+      "impact": "🔥 Yüksek",
+      "description": "Google Maps'te 'Sultanahmet otel', 'Taksim otel' diye ara. Çıkan otellerin web sitelerini ziyaret et. İletişim sayfasından WhatsApp/email bul. Her gün 10 otele mesaj at. Hedef: Ayda 300 otel.",
+      "steps": [
+        "Google Maps → 'Sultanahmet otel' ara",
+        "Her otelin web sitesine gir, WhatsApp numarasını bul",
+        "Toplu bir WhatsApp listesi oluştur",
+        "Günde 10 otele mesaj at (kişisel, spam değil)"
+      ],
+      "tools": [
+        "Google Maps",
+        "WhatsApp",
+        "Otel websitesi"
+      ]
+    },
+    {
+      "id": "linkedin-hotels",
+      "name": "LinkedIn Otel Grupları + Hotel Manager Outreach",
+      "emoji": "💼",
+      "difficulty": "Orta",
+      "impact": "🟡 Orta",
+      "description": "LinkedIn'de 'Hotel Manager Istanbul', 'Otel Müdürü', 'Hospitality Turkey' gruplarına katıl. Her gün 1 değerli post paylaş (BagajPark'ın otellere faydası hakkında). Direkt satış yapma, önce değer ver.",
+      "steps": [
+        "LinkedIn'de 'Otel Müdürü İstanbul', 'Hotel Managers Turkey' ara",
+        "Gruplara katıl",
+        "Haftada 2 post: 'Check-out sonrası misafir memnuniyetini artırmanın 3 yolu' gibi",
+        "Profiline bagajpark.com linkini ekle"
+      ],
+      "tools": [
+        "LinkedIn"
+      ]
+    },
+    {
+      "id": "whatsapp-broadcast",
+      "name": "WhatsApp Business Broadcast Listesi",
+      "emoji": "📱",
+      "difficulty": "Düşük",
+      "impact": "🔥 Yüksek",
+      "description": "Topladığın otel WhatsApp numaralarını bir broadcast listesine ekle. Haftada bir kısa bir duyuru gönder: 'Yeni şehir eklendi: [şehir adı]' veya 'Bu ay otel partnerlerimize özel %5 ek komisyon'. Alıcılar birbirini görmez, gizlilik korunur.",
+      "steps": [
+        "WhatsApp Business indir",
+        "Broadcast list oluştur: 'BagajPark Otel Partnerleri'",
+        "Haftada 1 mesaj gönder (değerli içerik, satış değil)"
+      ],
+      "tools": [
+        "WhatsApp Business"
+      ]
+    },
+    {
+      "id": "travel-agencies",
+      "name": "Seyahat Acenteleri ve Tur Operatörleri",
+      "emoji": "✈️",
+      "difficulty": "Orta",
+      "impact": "🟡 Orta",
+      "description": "İstanbul'daki tur operatörlerine ve seyahat acentelerine ulaş. Onlar zaten müşterilerine 'valiz emanet' öneriyor. BagajPark'ı resmi öneri olarak ekleyelim. Acente, müşterisine link gönderir, senden komisyon alır.",
+      "steps": [
+        "İstanbul seyahat acenteleri listesi çıkar (Google'da)",
+        "Her birine email at: 'Müşterilerinize valiz emanet öneriyor musunuz?'",
+        "Partnerlik teklif et (acente özel indirim kodu)"
+      ],
+      "tools": [
+        "Google",
+        "Email"
+      ]
+    },
+    {
+      "id": "tripadvisor-claim",
+      "name": "TripAdvisor Otel Mesajlaşma",
+      "emoji": "📝",
+      "difficulty": "Düşük",
+      "impact": "🟡 Orta",
+      "description": "TripAdvisor'da otel sayfalarına gir. 'Management' bölümünden otele mesaj gönderebilirsin (otel sahibi olduğunu iddia etmeden). Kısa ve net: 'BagajPark ile check-out sonrası valiz sorununu çözün.'",
+      "steps": [
+        "TripAdvisor → İstanbul otelleri",
+        "Her otelin sayfasında 'Send message to management'",
+        "Kısa tanıtım mesajı gönder"
+      ],
+      "tools": [
+        "TripAdvisor"
+      ]
+    }
+  ],
+  "templates": {
+    "tr": {
+      "whatsapp_short": "Merhaba [Otel Adı] ekibi,\n\nBen BagajPark'tan [İsmin]. Oteliniz için bir iş birliği teklifimiz var:\n\n🔹 Misafirleriniz check-out sonrası valizlerini en yakın BagajPark noktasına bırakır\n🔹 Siz ön büroda bagaj biriktirmekten kurtulursunuz\n🔹 Her yönlendirmede %10 komisyon kazanırsınız\n\nDetay: bagajpark.com/tr/hotels\n\n10 dakikalık bir görüşmeye ne dersiniz?",
+      "email_short": "Merhaba,\n\nBagajPark olarak otel misafirlerinizin check-out sonrası valiz sorununa pratik bir çözüm sunuyoruz.\n\nMisafirleriniz sizden çıkış yaptıktan sonra valizlerini en yakın BagajPark noktasına bırakıp şehri özgürce gezebilir. Siz de her yönlendirmede %10 komisyon kazanırsınız. Operasyonel yük sıfır.\n\nDetaylı bilgi: bagajpark.com/tr/hotels\n\nGorusmek uzere,\n[İsmin]\nBagajPark",
+      "booking_complaint_response": "Merhaba, misafir yorumlarınızda check-out sonrası bagaj sorunundan bahsedildiğini gördük. BagajPark ile bu sorunu çözmek ister misiniz? Detay: bagajpark.com/tr/hotels"
+    },
+    "en": {
+      "whatsapp_short": "Hi [Hotel Name] team,\n\nI'm [Name] from BagajPark. We have a partnership proposal:\n\n🔹 Your guests store luggage at nearby BagajPark points after checkout\n🔹 You free up lobby space\n🔹 You earn 10% commission per referral\n\nDetails: bagajpark.com/en/hotels\n\nUp for a 10-minute call?",
+      "email_short": "Hi,\n\nBagajPark offers a practical solution for your guests' post-checkout luggage problem.\n\nYour guests drop their bags at a nearby BagajPark point after checkout and explore the city hands-free. You earn 10% commission per referral. Zero operational burden.\n\nLearn more: bagajpark.com/en/hotels\n\nBest regards,\n[Name]\nBagajPark",
+      "booking_complaint_response": "Hi, we noticed your guest reviews mention checkout luggage issues. Would you like to solve this with BagajPark? Details: bagajpark.com/en/hotels"
+    }
+  },
+  "weekly_plan": [
+    {
+      "day": "Pazartesi",
+      "task": "Booking.com'da 5 otel bul + şikayet yorumlarını tara",
+      "duration": "30dk"
+    },
+    {
+      "day": "Salı",
+      "task": "WhatsApp broadcast: haftalık değer mesajı gönder",
+      "duration": "15dk"
+    },
+    {
+      "day": "Çarşamba",
+      "task": "LinkedIn'de 1 değerli post paylaş + 10 hotel manager'a bağlantı isteği",
+      "duration": "30dk"
+    },
+    {
+      "day": "Perşembe",
+      "task": "Google Maps'ten 10 yeni otel bul + iletişim bilgilerini topla",
+      "duration": "30dk"
+    },
+    {
+      "day": "Cuma",
+      "task": "Haftalık toplu email gönderimi (toplanan tüm otellere)",
+      "duration": "20dk"
+    },
+    {
+      "day": "Cumartesi",
+      "task": "Haftalık rapor: kaç otel ulaşıldı, kaçı dönüş yaptı",
+      "duration": "15dk"
+    }
+  ],
+  "key_principle": "Önce değer ver, sonra sat. Spam yapma, çözüm sun.",
+  "estimated_hotels_per_month": 300,
+  "estimated_conversion_rate": "5-10%",
+  "estimated_partners_per_month": "15-30 otel"
+}
