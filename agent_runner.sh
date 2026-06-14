@@ -34,6 +34,9 @@ run_agent "SEO Content Generator" "agents/seo_content_generator.py"
 run_agent "Blog Auto-Publisher" "agents/blog_auto_publisher.py"
 run_agent "Backlink Scout" "agents/backlink_scout.py"
 
+# Hotel partnership
+run_agent "Hotel Partner Generator" "agents/hotel_partner_generator.py"
+
 echo ""
 echo "=========================================="
 echo "  Reports generated in $REPORT_DIR/"
