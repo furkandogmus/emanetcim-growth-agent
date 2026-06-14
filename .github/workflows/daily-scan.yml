@@ -1,0 +1,80 @@
+name: Daily Growth Scan
+
+on:
+  schedule:
+    - cron: '30 4 * * *'   # 07:30 TRZ (UTC+3)
+  workflow_dispatch:        # Manuel de çalıştırılabilir
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  competitor-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Competitor Scanner
+        run: python agents/competitor_scanner.py
+      - name: Commit report
+        run: |
+          git config user.name "emanetcim-bot"
+          git config user.email "bot@bagajpark.com"
+          git add reports/competitors/
+          git diff --staged --quiet || git commit -m "competitor scan $(date +%Y-%m-%d)"
+          git push
+
+  reddit-monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Reddit Monitor
+        run: python agents/reddit_monitor.py
+      - name: Commit report
+        run: |
+          git config user.name "emanetcim-bot"
+          git config user.email "bot@bagajpark.com"
+          git add reports/reddit/
+          git diff --staged --quiet || git commit -m "reddit monitor $(date +%Y-%m-%d)"
+          git push
+
+  blog-engine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run Blog Engine
+        run: python agents/blog_engine.py
+      - name: Commit report
+        run: |
+          git config user.name "emanetcim-bot"
+          git config user.email "bot@bagajpark.com"
+          git add reports/blog/
+          git diff --staged --quiet || git commit -m "blog ideas $(date +%Y-%m-%d)"
+          git push
+
+  appstore-analyzer:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'  # only manual for now
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run App Store Analyzer
+        run: python agents/appstore_analyzer.py
+      - name: Commit report
+        run: |
+          git config user.name "emanetcim-bot"
+          git config user.email "bot@bagajpark.com"
+          git add reports/appstore/
+          git diff --staged --quiet || git commit -m "appstore analysis $(date +%Y-%m-%d)"
+          git push

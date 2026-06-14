@@ -1,0 +1,66 @@
+# Target cities for expansion & monitoring
+# Source: tourism data, competitor presence, travel demand
+
+istanbul:
+  name: Istanbul
+  country: Turkey
+  annual_tourists: 17M+
+  competitors: ["Bounce", "Stasher", "Radical Storage"]
+  bagajpark_presence: true
+  priority: 1
+
+ankara:
+  name: Ankara
+  country: Turkey
+  annual_tourists: 2M+
+  competitors: []
+  bagajpark_presence: true
+  priority: 1
+
+izmir:
+  name: Izmir
+  country: Turkey
+  annual_tourists: 3M+
+  competitors: []
+  bagajpark_presence: false
+  priority: 1
+
+antalya:
+  name: Antalya
+  country: Turkey
+  annual_tourists: 15M+
+  competitors: ["Bounce"]
+  bagajpark_presence: false
+  priority: 1
+
+mugla:
+  name: Mugla (Fethiye/Marmaris/Bodrum)
+  country: Turkey
+  annual_tourists: 4M+
+  competitors: []
+  bagajpark_presence: false
+  priority: 2
+
+capadocia:
+  name: Cappadocia (Nevsehir)
+  country: Turkey
+  annual_tourists: 3M+
+  competitors: []
+  bagajpark_presence: false
+  priority: 2
+
+berlin:
+  name: Berlin
+  country: Germany
+  annual_tourists: 12M+
+  competitors: ["Bounce", "Stasher", "Radical Storage"]
+  bagajpark_presence: false
+  priority: 3
+
+paris:
+  name: Paris
+  country: France
+  annual_tourists: 30M+
+  competitors: ["Bounce", "Stasher", "Nannybag"]
+  bagajpark_presence: false
+  priority: 3

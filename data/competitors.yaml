@@ -1,0 +1,66 @@
+# Luggage Storage Competitors — tracked by emanetcim
+# Add/update as they expand
+
+bounce:
+  name: Bounce
+  website: https://bounce.com
+  locations: 35000+
+  cities: 500+
+  funding: "$20M+ (Series B)"
+  investors: "a16z, General Catalyst, Lightspeed"
+  founded: 2018
+  ceo: Cody Candee
+  notes: "Acquired Nannybag Feb 2026. Global leader."
+
+stasher:
+  name: Stasher
+  website: https://stasher.com
+  locations: 5000+
+  cities: 300+
+  funding: "Undisclosed"
+  founded: 2015
+  notes: "Strong in UK/Europe. Insurance included."
+
+radical_storage:
+  name: Radical Storage
+  website: https://radicalstorage.com
+  locations: 1000+
+  cities: 200+
+  funding: "Bootstrap"
+  founded: 2015
+  notes: "Flat rate pricing model."
+
+nannybag:
+  name: Nannybag
+  website: https://nannybag.com
+  locations: 2000+
+  cities: 250+
+  funding: "Undisclosed"
+  founded: 2016
+  notes: "Acquired by Bounce Feb 2026. Former European leader."
+
+luggagehero:
+  name: LuggageHero
+  website: https://luggagehero.com
+  locations: 500+
+  cities: 100+
+  funding: "Undisclosed"
+  founded: 2017
+  notes: "Hourly pricing model."
+
+vertoe:
+  name: Vertoe
+  website: https://vertoe.com
+  locations: 500+
+  cities: 50+
+  notes: "US-focused, daily rates."
+
+bagajpark:
+  name: BagajPark
+  website: https://bagajpark.com
+  locations: 50+
+  cities: 5+
+  funding: "Bootstrap"
+  founded: 2025
+  stack: "Next.js, PostgreSQL, Redis, Docker"
+  notes: "Turkey-focused. TR/EN/DE/FR/ES/IT. Product Hunt featured."
