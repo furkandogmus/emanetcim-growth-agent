@@ -1,4 +1,4 @@
-name: Daily Growth Scan
+name: Emanetcim Daily Growth Scan
 
 on:
   schedule:
@@ -17,6 +17,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 pyyaml 2>/dev/null || true
       - name: Run Competitor Scanner
         run: python agents/competitor_scanner.py
       - name: Commit report
@@ -61,9 +63,30 @@ jobs:
           git diff --staged --quiet || git commit -m "blog ideas $(date +%Y-%m-%d)"
           git push
 
+  seo-growth:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run SEO Content Generator
+        run: python agents/seo_content_generator.py
+      - name: Run Blog Auto-Publisher
+        run: python agents/blog_auto_publisher.py
+      - name: Run Backlink Scout
+        run: python agents/backlink_scout.py
+      - name: Commit reports
+        run: |
+          git config user.name "emanetcim-bot"
+          git config user.email "bot@bagajpark.com"
+          git add reports/
+          git diff --staged --quiet || git commit -m "seo growth scan $(date +%Y-%m-%d)"
+          git push
+
   appstore-analyzer:
     runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch'  # only manual for now
+    if: github.event_name == 'workflow_dispatch'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
