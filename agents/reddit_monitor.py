@@ -2,8 +2,7 @@
 """
 Reddit Monitor — BagajPark Growth Agent
 
-Daily: searches Reddit for unanswered luggage storage questions.
-Finds posts like "where to store luggage in X" where BagajPark operates.
+Searches for unanswered luggage storage questions on Reddit.
 Output: reports/reddit/{date}.md
 """
 
@@ -20,38 +19,32 @@ from pathlib import Path
 REPORTS_DIR = Path(__file__).resolve().parent.parent / "reports" / "reddit"
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
-# Cities where BagajPark operates (or nearby) — prioritize these
-TARGET_CITIES = [
-    "istanbul", "ankara", "izmir", "turkey", "antalya",
-    "fethiye", "bodrum", "marmaris", "kemer", "alanya",
-    "capadocia", "pamukkale", "ephesus",
+TARGETS = [
+    # (city, keyword)
+    ("Istanbul", "luggage storage"),
+    ("Istanbul", "store my luggage"),
+    ("Istanbul", "leave my bags"),
+    ("Ankara", "luggage storage"),
+    ("Izmir", "luggage storage"),
+    ("Antalya", "luggage storage"),
+    ("Turkey", "luggage storage"),
+    ("Türkiye", "valiz emanet"),
+    ("Istanbul", "bag drop"),
+    ("Istanbul", "saklama"),
 ]
 
-TARGET_KEYWORDS = [
-    "luggage storage",
-    "store luggage",
-    "store my bag",
-    "bag storage",
-    "leave my luggage",
-    "baggage storage",
-    "keep my bags",
-    "locker",
-    "saklama",
-    "emanet",
-]
+EXCLUDE = ["politics", "worldnews", "news", "TurkeyMeta"]
 
-EXCLUDE_SUBREDDITS = ["politics", "worldnews", "news"]
 
-def fetch_reddit_results(query, subreddit=None, limit=5):
-    """Search Reddit via Google (Reddit's own search is unreliable without API)"""
+def find_reddit_posts(city, keyword, limit=5):
+    """Search Google for Reddit posts about luggage storage in a city."""
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/125.0.0.0 Safari/537.36",
-        "Accept": "text/html",
+        "Accept": "text/html,application/xhtml+xml",
     }
 
-    site = f"site:reddit.com/r/{subreddit}" if subreddit else "site:reddit.com"
-    q = f"{site} {query}"
-    url = f"https://www.google.com/search?q={urllib.parse.quote(q)}&tbs=qdr:d"  # last 24h
+    query = f'site:reddit.com "{city}" "{keyword}"'
+    url = f"https://www.google.com/search?q={urllib.parse.quote(query)}"
 
     try:
         req = urllib.request.Request(url, headers=headers)
@@ -60,81 +53,69 @@ def fetch_reddit_results(query, subreddit=None, limit=5):
     except Exception as e:
         return [], str(e)
 
-    results = []
-    # Extract Reddit post URLs and titles from Google search results
-    patterns = [
-        (r'<a href="/url\?q=(https?://(?:www\.)?reddit\.com/r/[^/]+/comments/[^"&]+)[^>]*>(.*?)</a>', 1),
-        (r'href="(https?://(?:www\.)?reddit\.com/r/[^/]+/comments/[^"&]+)"[^>]*>(.*?)</a>', 0),
-    ]
-
-    for pattern, url_group in patterns:
-        for match in re.finditer(pattern, html, re.DOTALL):
-            post_url = match.group(1) if url_group == 0 else match.group(1)
-            title = re.sub(r'<[^>]+>', '', match.group(2) if url_group == 0 else match.group(2)).strip()
-
-            # Normalize URL
-            post_url = post_url.split('&')[0]  # strip tracking params
-            if post_url.startswith('/url?q='):
-                post_url = post_url.replace('/url?q=', '').split('&')[0]
-
-            # Decode URL encoding
-            post_url = urllib.parse.unquote(post_url)
-
-            # Skip excluded subreddits
-            if any(ex in post_url.lower() for ex in EXCLUDE_SUBREDDITS):
-                continue
-
-            # Skip non-question posts
-            if "?" not in title and not any(kw.lower() in title.lower() for kw in TARGET_KEYWORDS):
-                continue
-
-            results.append({"title": title, "url": post_url})
-            if len(results) >= limit:
-                break
-        if results:
+    posts = []
+    # Extract Reddit post URLs from search results
+    for match in re.finditer(
+        r'<a\s+href="/url\?q=(https?://(?:www\.)?reddit\.com/r/[^/]+/comments/[^"&]+)[^"]*"',
+        html
+    ):
+        url = urllib.parse.unquote(match.group(1))
+        if any(ex in url.lower() for ex in EXCLUDE):
+            continue
+        posts.append(url)
+        if len(posts) >= limit:
             break
 
-    return results, None
+    return posts, None
+
+
+def get_post_title(post_url):
+    """Fetch a Reddit post page and extract its title."""
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    }
+    try:
+        req = urllib.request.Request(post_url, headers=headers)
+        with urllib.request.urlopen(req, timeout=8) as r:
+            html = r.read().decode("utf-8", errors="replace")
+        m = re.search(r'<title>(.*?)</title>', html, re.DOTALL)
+        if m:
+            return m.group(1).replace(" - Reddit", "").strip()
+    except Exception:
+        pass
+    return ""
+
 
 def main():
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    lines = [
-        f"# Reddit Monitor — {today}",
-        f"_Generated by emanetcim-growth-agent_\n",
-    ]
-
     all_posts = []
+    seen = set()
     errors = []
 
-    # Search for each city + keyword combination
-    for city in TARGET_CITIES:
-        for keyword in TARGET_KEYWORDS[:3]:  # Limit to 3 keywords per city
-            query = f"{city} {keyword}"
-            posts, err = fetch_reddit_results(query, limit=3)
-            if err:
-                errors.append(f"{query}: {err}")
-            for p in posts:
-                if p["url"] not in [x["url"] for x in all_posts]:
-                    all_posts.append(p)
+    for city, keyword in TARGETS:
+        posts, err = find_reddit_posts(city, keyword)
+        if err:
+            errors.append(f"{city}/{keyword}: {err}")
+        for url in posts:
+            if url not in seen:
+                seen.add(url)
+                title = get_post_title(url)
+                all_posts.append({"title": title or "(no title)", "url": url, "city": city, "keyword": keyword})
 
-    # Also search travel subreddits specifically
-    for sub in ["travel", "solotravel", "backpacking", "istanbul", "TurkeyTravel"]:
-        for keyword in TARGET_KEYWORDS[:2]:
-            posts, err = fetch_reddit_results(keyword, subreddit=sub, limit=3)
-            if err:
-                errors.append(f"r/{sub}: {err}")
-            for p in posts:
-                if p["url"] not in [x["url"] for x in all_posts]:
-                    all_posts.append(p)
+    lines = [
+        f"# Reddit Monitor — {today}\n",
+    ]
 
     if all_posts:
         lines.append(f"## 🔍 Found {len(all_posts)} relevant posts\n")
         for i, post in enumerate(all_posts[:15], 1):
             lines.append(f"{i}. **{post['title']}**")
+            lines.append(f"   📍 {post['city']} | 🏷️ `{post['keyword']}`")
             lines.append(f"   🔗 {post['url']}")
             lines.append("")
     else:
         lines.append("## 🔍 No new relevant posts found today\n")
+        lines.append("_Try expanding search scope or check manually at reddit.com/r/travel_\n")
 
     if errors:
         lines.append("### ⚠️ Errors")
@@ -142,7 +123,7 @@ def main():
             lines.append(f"- {e}")
 
     lines.append("---")
-    lines.append(f"Next scan: tomorrow 07:30 TRT")
+    lines.append("_Next scan: tomorrow 07:30 TRT_")
 
     report = "\n".join(lines)
     print(report)
@@ -151,7 +132,8 @@ def main():
     with open(report_path, "w") as f:
         f.write(report)
 
-    return 0
+    return 1 if errors else 0
+
 
 if __name__ == "__main__":
     sys.exit(main())
