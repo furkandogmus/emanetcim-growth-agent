@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-06-19",
+  "type": "seo_content_audit",
+  "cities": {
+    "istanbul": {
+      "status": "needs_content",
+      "suggested_sections": [
+        "Sultanahmet ve Tarihi Yarımada Rehberi",
+        "Taksim-İstiklal Çevresi Valiz Emanet",
+        "Kadıköy-Moda Sahil Noktaları"
+      ],
+      "keyword_opportunities": [
+        "İstanbul valiz emanet fiyat",
+        "Sultanahmet bagaj depolama",
+        "Taksim valiz bırakma noktası",
+        "check-out sonrası İstanbul"
+      ]
+    },
+    "ankara": {
+      "status": "needs_content",
+      "suggested_sections": [
+        "Kızılay ve Çankaya İş Merkezleri",
+        "YHT Garı Çevresi Bagaj Depolama"
+      ],
+      "keyword_opportunities": [
+        "Ankara valiz emanet nerede",
+        "Kızılay bagaj bırakma",
+        "YHT garı emanet"
+      ]
+    },
+    "izmir": {
+      "status": "needs_content",
+      "suggested_sections": [
+        "Alsancak ve Kordon Boyu",
+        "Kemeraltı Çarşısı Alışveriş Rehberi"
+      ],
+      "keyword_opportunities": [
+        "İzmir valiz emanet ucuz",
+        "Alsancak bagaj depolama",
+        "Konak valiz bırakma"
+      ]
+    },
+    "antalya": {
+      "status": "needs_content",
+      "suggested_sections": [
+        "Kaleiçi Tarihi Bölge",
+        "Konyaaltı ve Lara Plaj Bölgeleri"
+      ],
+      "keyword_opportunities": [
+        "Antalya valiz emanet Kaleiçi",
+        "Konyaaltı bagaj depolama"
+      ]
+    },
+    "bodrum": {
+      "status": "needs_content",
+      "suggested_sections": [
+        "Marina ve Tekne Turları",
+        "Bodrum Gece Hayatı Rehberi"
+      ],
+      "keyword_opportunities": [
+        "Bodrum marina valiz emanet",
+        "Bodrum otogar bagaj"
+      ]
+    },
+    "cappadocia": {
+      "status": "needs_content",
+      "suggested_sections": [
+        "Göreme ve Peribacaları Vadileri",
+        "Sıcak Hava Balon Turu Öncesi"
+      ],
+      "keyword_opportunities": [
+        "Kapadokya valiz emanet Göreme",
+        "balon turu bagaj depolama"
+      ]
+    },
+    "berlin": {
+      "status": "needs_content",
+      "suggested_sections": [
+        "Hauptbahnhof ve Alexanderplatz",
+        "Museum Island Ziyareti"
+      ],
+      "keyword_opportunities": [
+        "Berlin luggage storage Hauptbahnhof",
+        "Berlin bag storage Alexanderplatz"
+      ]
+    },
+    "paris": {
+      "status": "needs_content",
+      "suggested_sections": [
+        "Gare du Nord ve Louvre Çevresi",
+        "Eyfel Kulesi ve Seine Nehri"
+      ],
+      "keyword_opportunities": [
+        "Paris consigne bagage Gare du Nord",
+        "Paris luggage storage near Louvre"
+      ]
+    },
+    "barcelona": {
+      "status": "needs_content",
+      "suggested_sections": [
+        "Sagrada Familia ve Gotik Mahalle",
+        "La Rambla ve Plaj Bölgesi"
+      ],
+      "keyword_opportunities": [
+        "Barcelona luggage storage Sagrada",
+        "Barcelona consigna equipaje"
+      ]
+    },
+    "rome": {
+      "status": "needs_content",
+      "suggested_sections": [
+        "Termini İstasyonu Çevresi",
+        "Colosseum ve Vatikan Bölgesi"
+      ],
+      "keyword_opportunities": [
+        "Rome luggage storage Termini",
+        "Roma deposito bagagli"
+      ]
+    },
+    "amsterdam": {
+      "status": "needs_content",
+      "suggested_sections": [
+        "Centraal Station ve Şehir Merkezi",
+        "Museumplein ve Kanallar"
+      ],
+      "keyword_opportunities": [
+        "Amsterdam luggage storage Centraal",
+        "Amsterdam bagage opbergen"
+      ]
+    },
+    "london": {
+      "status": "needs_content",
+      "suggested_sections": [
+        "Paddington ve King's Cross",
+        "Westminster ve Thames Nehri"
+      ],
+      "keyword_opportunities": [
+        "London luggage storage Paddington",
+        "London left luggage Kings Cross"
+      ]
+    }
+  }
+}
