@@ -1,0 +1,146 @@
+{
+  "generated_at": "2026-06-29",
+  "type": "blog_recommendations",
+  "total_ideas": 10,
+  "languages": {
+    "tr": [
+      {
+        "slug": "check-out-sonrasi-istanbul-rehberi",
+        "title": "Check-Out Sonrası İstanbul'da Ne Yapılır? Bavulsuz Gezme Rehberi",
+        "excerpt": "Otelinizden çıkış yaptınız ama uçağınıza daha saatler var. İşte İstanbul'da check-out sonrası valiz derdi olmadan gezebileceğiniz 5 harika rota.",
+        "keywords": [
+          "check-out sonrası İstanbul",
+          "bavulsuz gezme",
+          "otel çıkışı aktiviteleri"
+        ],
+        "priority": {
+          "score": 70,
+          "emoji": "🟡"
+        }
+      },
+      {
+        "slug": "antalya-plaj-ucus-arasinda-bagaj",
+        "title": "Antalya'da Son Gün: Plaj ile Uçuş Arasında Valizleri Nereye Bırakmalı?",
+        "excerpt": "Antalya tatilinin son gününde otelden çıkıp uçağa binene kadar geçen süreyi en iyi şekilde değerlendirmenin püf noktaları.",
+        "keywords": [
+          "Antalya son gün",
+          "plaj valiz emanet",
+          "check-out Antalya"
+        ],
+        "priority": {
+          "score": 70,
+          "emoji": "🟡"
+        }
+      },
+      {
+        "slug": "kapadokya-balon-oncesi-bagaj",
+        "title": "Kapadokya'da Balon Turu Öncesi Valiz Depolama Rehberi",
+        "excerpt": "Sıcak hava balonu deneyimi öncesi valizlerinizi nereye bırakacağınızı mı düşünüyorsunuz? İşte Kapadokya'da bagaj depolama için en pratik çözümler.",
+        "keywords": [
+          "Kapadokya balon turu",
+          "Göreme valiz emanet",
+          "Kapadokya bagaj"
+        ],
+        "priority": {
+          "score": 70,
+          "emoji": "🟡"
+        }
+      },
+      {
+        "slug": "istanbul-havalimani-emanet-ucretleri-2026",
+        "title": "2026 İstanbul Havalimanı Emanet Ücretleri ve Alternatif Çözümler",
+        "excerpt": "İstanbul Havalimanı (IST) ve Sabiha Gökçen (SAW) 2026 bagaj emanet fiyatları. Havalimanı emanetine alternatif daha ucuz şehir merkezi çözümleri.",
+        "keywords": [
+          "İstanbul Havalimanı emanet ücreti 2026",
+          "IST bagaj emanet fiyat"
+        ],
+        "priority": {
+          "score": 100,
+          "emoji": "🔴"
+        }
+      },
+      {
+        "slug": "ingiltere-turkiye-valiz-emanet",
+        "title": "İngiltere'den Türkiye'ye Seyahat: Valiz Emanet ve Depolama Rehberi",
+        "excerpt": "İngiltere'den Türkiye'ye seyahat edenler için kapsamlı valiz emanet rehberi. Londra, Manchester ve İstanbul'da bagaj depolama ipuçları.",
+        "keywords": [
+          "İngiltere Türkiye seyahat",
+          "Londra valiz emanet"
+        ],
+        "priority": {
+          "score": 80,
+          "emoji": "🟡"
+        }
+      }
+    ],
+    "en": [
+      {
+        "slug": "istanbul-last-day-without-luggage",
+        "title": "Istanbul Last Day Guide: How to Explore Luggage-Free After Check-Out",
+        "excerpt": "Checked out of your hotel but your flight is hours away? Here are 5 amazing Istanbul itineraries you can enjoy without dragging your suitcase around.",
+        "keywords": [
+          "Istanbul last day",
+          "luggage-free travel",
+          "hotel checkout tips"
+        ],
+        "priority": {
+          "score": 70,
+          "emoji": "🟡"
+        }
+      },
+      {
+        "slug": "antalya-between-beach-and-flight",
+        "title": "Antalya Last Day: Where to Store Luggage Between Beach and Flight",
+        "excerpt": "Make the most of your final day in Antalya. Tips on enjoying the beach and exploring the Old Town before heading to the airport.",
+        "keywords": [
+          "Antalya last day luggage",
+          "beach bag storage",
+          "Antalya checkout"
+        ],
+        "priority": {
+          "score": 80,
+          "emoji": "🟡"
+        }
+      },
+      {
+        "slug": "cappadocia-balloon-luggage-storage",
+        "title": "Cappadocia Balloon Tour Luggage Storage Guide",
+        "excerpt": "Planning a hot air balloon ride in Cappadocia? Here's where to store your bags while you float above the fairy chimneys.",
+        "keywords": [
+          "Cappadocia balloon luggage",
+          "Goreme bag storage"
+        ],
+        "priority": {
+          "score": 80,
+          "emoji": "🟡"
+        }
+      },
+      {
+        "slug": "istanbul-airport-luggage-storage-prices-2026",
+        "title": "Istanbul Airport Luggage Storage Prices 2026 and Cheaper Alternatives",
+        "excerpt": "Complete guide to IST and SAW airport left luggage prices for 2026, plus money-saving city center alternatives.",
+        "keywords": [
+          "Istanbul Airport luggage price 2026",
+          "IST left luggage cost"
+        ],
+        "priority": {
+          "score": 100,
+          "emoji": "🔴"
+        }
+      },
+      {
+        "slug": "uk-to-turkey-luggage-guide",
+        "title": "UK to Turkey Travel: Complete Luggage Storage Guide",
+        "excerpt": "Traveling from the UK to Turkey? Comprehensive guide to luggage storage in London, Manchester, Istanbul, and beyond.",
+        "keywords": [
+          "UK to Turkey luggage",
+          "London bag storage"
+        ],
+        "priority": {
+          "score": 80,
+          "emoji": "🟡"
+        }
+      }
+    ]
+  }
+}
